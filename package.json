@@ -4,10 +4,12 @@
   "description": "q all sync and async",
   "main": "index.js",
   "dependencies": {
-    "q": "^1.5.1",
-    "underscore": "^1.9.1"
+    "q": "1.5.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "underscore": "1.9.1"
+
+  },
   "scripts": {
     "test": "npm test"
   },

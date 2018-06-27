@@ -1,0 +1,18 @@
+qalllib.qSyncAll(add, nos)
+qalllib.qAsyncAll(add, nos)
+qalllib.qASyncWithBatch(add, nos, 3)
+
+
+
+example  
+pass array to add function with batch size 3
+
+qalllib.qASyncWithBatch(add, [1,2,3,4,5], 3)
+  .then(function (data) {
+    console.log((new Date()).toTimeString().slice(0, 8), 'end executing:')
+    console.log(data)
+  })
+  .catch(function (error) {
+    console.log(error, error, error)
+  })
+  .done(console.log('dowAne'))

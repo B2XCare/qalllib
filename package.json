@@ -1,0 +1,29 @@
+{
+  "name": "qalllib",
+  "version": "1.0.0",
+  "description": "q all sync and async",
+  "main": "index.js",
+  "dependencies": {
+    "q": "^1.5.1",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/B2XCare/qalllib.git"
+  },
+  "keywords": [
+    "q",
+    "sync",
+    "async"
+  ],
+  "author": "amey.chavan@b2x.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/B2XCare/qalllib/issues"
+  },
+  "homepage": "https://github.com/B2XCare/qalllib#readme"
+}

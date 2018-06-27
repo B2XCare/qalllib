@@ -1,6 +1,16 @@
-qalllib.qSyncAll(add, nos)
-qalllib.qAsyncAll(add, nos)
-qalllib.qASyncWithBatch(add, nos, 3)
+
+Description
+3 functions to reduce the qall complexity .
+
+qalllib.qSyncAll(functionName, arrayOfElements)
+qalllib.qAsyncAll(functionName, arrayOfElements)
+qalllib.qASyncWithBatch(functionName, arrayOfElements, batchSize)
+
+
+Params:
+arrayOfElements: is array for which the qall has to be executed .
+batchSize : interger default 10
+            batch size is to limit the async call to batch. helps to reduce overloading.
 
 
 
@@ -13,6 +23,6 @@ qalllib.qASyncWithBatch(add, [1,2,3,4,5], 3)
     console.log(data)
   })
   .catch(function (error) {
-    console.log(error, error, error)
+    console.log('error in catch',error)
   })
-  .done(console.log('dowAne'))
+  .done(console.log('promise done'))

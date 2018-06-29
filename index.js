@@ -3,7 +3,7 @@ let q = require('q')
 let qSyncAll = function (functionName, nos, ...args) {
   // console.log(functionName, nos,...args)
   // console.log("#################")
-  let p = q.makePromise()
+  let p = q()
   let thePromises = []
 
   nos.forEach(function (file) {
@@ -65,7 +65,7 @@ let qAsyncAll = function (functionName, nos, ...args) {
 }
 
 let qASyncWithBatch = function (functionName, nos, batchSize = 10, ...args) {
-  let p = q.makePromise()
+  let p = q()
   let thePromises = []
 
   let arrays = []

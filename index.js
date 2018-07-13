@@ -1,10 +1,14 @@
 let q = require('q')
 
 let qSyncAll = function (functionName, nos, ...args) {
-  nos = nos.concat([])
+  if(!Array.isArray( nos) ){ 
+	return q.reject(new Error('Array is underfined 0xA1001'))
+   }
   let p = q()
   let thePromises = []
 
+ 
+  nos = nos.concat([])
   nos.forEach(function (file) {
     p = p
       .then(function () {
@@ -38,6 +42,9 @@ let qSyncAll = function (functionName, nos, ...args) {
 }
 
 let qAsyncAll = function (functionName, nos, ...args) {
+  if(!Array.isArray( nos) ){ 
+	return q.reject(new Error('Array is underfined 0xA1001'))
+   }
   let data = {
     resolve: [],
     reject: []
@@ -65,6 +72,9 @@ let qAsyncAll = function (functionName, nos, ...args) {
 }
 
 let qASyncWithBatch = function (functionName, nos, batchSize = 10, ...args) {
+  if(!Array.isArray( nos) ){ 
+	return q.reject(new Error('Array is underfined 0xA1001'))
+   }
   let p = q()
   let thePromises = []
   nos = nos.concat([])
